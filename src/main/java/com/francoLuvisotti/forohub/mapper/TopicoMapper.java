@@ -1,0 +1,32 @@
+package com.francoLuvisotti.forohub.mapper;
+
+import com.francoLuvisotti.forohub.domain.Topico;
+import com.francoLuvisotti.forohub.dto.*;
+
+public class TopicoMapper {
+
+    public static ListadoTopicoDTO toListarDTO(Topico topico) {
+        return new ListadoTopicoDTO(
+                topico.getId(),
+                topico.getTitulo(),
+                topico.getMensaje(),
+                topico.getFechaCreacion(),
+                topico.getStatus(),
+                topico.getAutor().getNombre(),
+                topico.getCurso().getNombre()
+        );
+    }
+
+
+    public static DetalleTopicoDTO toDetalleDTO(Topico topico) {
+        return new DetalleTopicoDTO(
+                topico.getId(),
+                topico.getTitulo(),
+                topico.getMensaje(),
+                topico.getFechaCreacion(),
+                topico.getStatus().name(),
+                topico.getAutor().getNombre(),
+                topico.getCurso().getNombre()
+        );
+    }
+}
