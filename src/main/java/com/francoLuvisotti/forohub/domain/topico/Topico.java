@@ -1,5 +1,7 @@
-package com.francoLuvisotti.forohub.domain;
+package com.francoLuvisotti.forohub.domain.topico;
 
+import com.francoLuvisotti.forohub.domain.usuario.Usuario;
+import com.francoLuvisotti.forohub.domain.curso.Curso;
 import jakarta.persistence.*;
 import lombok.*;
 

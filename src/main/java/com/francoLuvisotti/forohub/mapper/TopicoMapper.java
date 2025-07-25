@@ -1,6 +1,6 @@
 package com.francoLuvisotti.forohub.mapper;
 
-import com.francoLuvisotti.forohub.domain.Topico;
+import com.francoLuvisotti.forohub.domain.topico.Topico;
 import com.francoLuvisotti.forohub.dto.*;
 
 public class TopicoMapper {

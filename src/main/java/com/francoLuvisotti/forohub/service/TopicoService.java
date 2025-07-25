@@ -1,16 +1,15 @@
 package com.francoLuvisotti.forohub.service;
 
-import com.francoLuvisotti.forohub.domain.Topico;
-import com.francoLuvisotti.forohub.domain.Topico.StatusTopico;
+import com.francoLuvisotti.forohub.domain.topico.Topico;
+import com.francoLuvisotti.forohub.domain.topico.Topico.StatusTopico;
 import com.francoLuvisotti.forohub.dto.*;
 import com.francoLuvisotti.forohub.mapper.TopicoMapper;
-import com.francoLuvisotti.forohub.repository.CursoRepository;
-import com.francoLuvisotti.forohub.repository.TopicoRepository;
-import com.francoLuvisotti.forohub.repository.UsuarioRepository;
+import com.francoLuvisotti.forohub.domain.curso.CursoRepository;
+import com.francoLuvisotti.forohub.domain.topico.TopicoRepository;
+import com.francoLuvisotti.forohub.domain.usuario.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

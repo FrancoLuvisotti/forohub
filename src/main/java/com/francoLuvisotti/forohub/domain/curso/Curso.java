@@ -1,16 +1,16 @@
-package com.francoLuvisotti.forohub.domain;
+package com.francoLuvisotti.forohub.domain.curso;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "cursos")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Usuario {
+public class Curso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,5 +18,5 @@ public class Usuario {
 
     private String nombre;
 
-    private String email;
+    private String categoria;
 }

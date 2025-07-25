@@ -1,4 +1,4 @@
-package com.francoLuvisotti.forohub.infra;
+package com.francoLuvisotti.forohub.infra.errores;
 
 import com.francoLuvisotti.forohub.dto.ApiResponse;
 import jakarta.persistence.EntityNotFoundException;

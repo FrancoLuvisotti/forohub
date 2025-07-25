@@ -1,6 +1,6 @@
 package com.francoLuvisotti.forohub.dto;
 
-import com.francoLuvisotti.forohub.domain.Topico;
+import com.francoLuvisotti.forohub.domain.topico.Topico;
 
 import java.time.LocalDateTime;
 

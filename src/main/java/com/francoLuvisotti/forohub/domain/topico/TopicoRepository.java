@@ -1,6 +1,5 @@
-package com.francoLuvisotti.forohub.repository;
+package com.francoLuvisotti.forohub.domain.topico;
 
-import com.francoLuvisotti.forohub.domain.Topico;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TopicoRepository extends JpaRepository<Topico, Long> {

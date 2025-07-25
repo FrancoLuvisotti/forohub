@@ -1,7 +1,9 @@
-package com.francoLuvisotti.forohub.repository;
+package com.francoLuvisotti.forohub.domain.usuario;
 
-import com.francoLuvisotti.forohub.domain.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+    Optional<Usuario> findByEmail(String email);
 }
+
