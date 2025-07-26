@@ -63,7 +63,7 @@ Por defecto, la API estará disponible en `http://localhost:8080`.
 
 La siguiente imagen muestra el diseño de la base de datos para el proyecto, con las entidades principales y sus relaciones:
 
-![Diagrama de base de datos](assets/diagrama.png)
+<img src="assets/diagrama.png" alt="Diagrama de base de datos" width="150"/>
 
 ### Estructura de las tablas principales
 
