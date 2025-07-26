@@ -1,18 +1,19 @@
 package com.francoLuvisotti.forohub.domain.usuario;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
 
-@Entity(name = "Usuario")
 @Table(name = "usuarios")
+@Entity(name = "Usuario")
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -23,25 +24,22 @@ public class Usuario implements UserDetails {
     private Long id;
     private String nombre;
     private String email;
-    private String clave;
+    private String password;
 
-    @Enumerated(EnumType.STRING)
-    private Perfil perfil;
-
-
+    // Implementación de UserDetails
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
-    }
-
-    @Override
-    public String getPassword() {
-        return clave;
+        return List.of(); // o puedes retornar roles si los tienes
     }
 
     @Override
     public String getUsername() {
         return email;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
     }
 
     @Override
@@ -63,5 +61,4 @@ public class Usuario implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-
 }

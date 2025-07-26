@@ -12,7 +12,7 @@ public class TopicoMapper {
                 topico.getMensaje(),
                 topico.getFechaCreacion(),
                 topico.getStatus(),
-                topico.getAutor().getNombre(),
+                topico.getAutor().getEmail(),
                 topico.getCurso().getNombre()
         );
     }
@@ -25,7 +25,7 @@ public class TopicoMapper {
                 topico.getMensaje(),
                 topico.getFechaCreacion(),
                 topico.getStatus().name(),
-                topico.getAutor().getNombre(),
+                topico.getAutor().getEmail(),
                 topico.getCurso().getNombre()
         );
     }

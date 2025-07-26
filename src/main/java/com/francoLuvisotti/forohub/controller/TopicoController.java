@@ -8,8 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
-
 @RestController
 @RequestMapping("/topicos")
 public class TopicoController {
@@ -41,19 +39,19 @@ public class TopicoController {
         return ResponseEntity.ok(new ApiResponse<>(true, "Detalle obtenido correctamente", detalle));
 }
 
-   @PutMapping("/{id}")
-public ResponseEntity<ApiResponse<DetalleTopicoDTO>> actualizar(
+    @PutMapping("/{id}")
+    public ResponseEntity<ApiResponse<DetalleTopicoDTO>> actualizar(
         @PathVariable Long id,
         @RequestBody @Valid ActualizacionTopicoDTO datos) {
 
-    DetalleTopicoDTO actualizado = topicoService.actualizar(id, datos);
+        DetalleTopicoDTO actualizado = topicoService.actualizar(id, datos);
 
-    return ResponseEntity.ok(new ApiResponse<>(true, "Tópico actualizado correctamente", actualizado));
+        return ResponseEntity.ok(new ApiResponse<>(true, "Tópico actualizado correctamente", actualizado));
 }
 
     @DeleteMapping("/{id}")
-public ResponseEntity<ApiResponse<Void>> eliminar(@PathVariable Long id) {
-    topicoService.eliminar(id);
-    return ResponseEntity.ok(new ApiResponse<>(true, "Tópico eliminado correctamente", null));
+    public ResponseEntity<ApiResponse<Void>> eliminar(@PathVariable Long id) {
+        topicoService.eliminar(id);
+        return ResponseEntity.ok(new ApiResponse<>(true, "Tópico eliminado correctamente", null));
 }
 }

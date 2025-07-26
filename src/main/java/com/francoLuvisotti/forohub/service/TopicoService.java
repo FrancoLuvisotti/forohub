@@ -51,10 +51,9 @@ public class TopicoService {
                 .toList();
     }
 
-
     public DetalleTopicoDTO detalle(Long id) {
         var topico = topicoRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Tópico no encontrado"));
+                .orElseThrow(() -> new EntityNotFoundException("Tópico con ID " + id + " no encontrado"));
         return TopicoMapper.toDetalleDTO(topico);
     }
 
