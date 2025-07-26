@@ -249,10 +249,20 @@ Swagger te brinda una interfaz gráfica para probar todos los endpoints y genera
    - `/usuarios`
    - `/respuestas`
      
+
 2. **Pruebas y documentación automática con Swagger**
     Para facilitar el uso y la documentación de la API, se incorpora la dependencia **SpringFox Swagger**.  
 Swagger te brinda una interfaz gráfica para probar todos los endpoints y genera documentación automática a medida que desarrollas tu API.
 
+
+3. **Respuestas a los tópicos:**  
+  Implementar los endpoints y la lógica para poder crear, listar, actualizar y eliminar respuestas asociadas a los tópicos, permitiendo así la interacción completa en los hilos del foro.
+
+
+4. **Paginación:**  
+  Incorporar paginación en los endpoints de listado de tópicos y respuestas, para facilitar la navegación y el rendimiento cuando exista una gran cantidad de registros.
+
+---
 ---
 
 ## Contribuciones
